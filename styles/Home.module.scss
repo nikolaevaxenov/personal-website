@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+
+  background: #242423;
+  color: #f5cb5c;
+
+  &__main {
+    flex: 1;
+
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  &__footer {
+    align-self: center;
+    padding-bottom: 1rem;
+
+    font-size: 1rem;
+  }
+}
