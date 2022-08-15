@@ -3,9 +3,8 @@ import styles from "./Projects.module.scss";
 import { IProject } from "../../utils/interfaces";
 import { useQuery } from "@tanstack/react-query";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Scrollbar } from "swiper";
+import { Scrollbar } from "swiper";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { useTranslation } from "next-i18next";
@@ -24,7 +23,7 @@ function Projects() {
         {isLoading ?? t("projects.loading")}
         {data && (
           <Swiper
-            modules={[Navigation, Scrollbar]}
+            modules={[Scrollbar]}
             breakpoints={{
               640: {
                 width: 640,
@@ -37,7 +36,6 @@ function Projects() {
             }}
             spaceBetween={10}
             centerInsufficientSlides
-            navigation
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
           >
