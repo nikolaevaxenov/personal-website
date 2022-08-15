@@ -1,0 +1,21 @@
+.projectsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  height: 100vh;
+
+  background: #f5cb5c;
+  color: #242423;
+
+  h1 {
+    margin: 0;
+    padding: 2rem 0;
+
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  &__projects {
+    margin: 0 2rem;
+  }
+}

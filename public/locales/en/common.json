@@ -1,0 +1,28 @@
+{
+  "landing": {
+    "firstName": "Ivan",
+    "lastName": "Nikolaev-Axenov",
+    "education": "Education: Software Engineering (MIREA, 4 course)"
+  },
+  "projects": {
+    "projects": "Projects",
+    "loading": "Loading...",
+    "project": {
+      "goToUrl": "Go to project webpage",
+      "goToGithub": "Go to project repository"
+    }
+  },
+  "contactMe": {
+    "contactMe": "Contacts",
+    "vk": "VK",
+    "loading": "Loading...",
+    "thanksForFeedback": "Thanks for your feedback!",
+    "retry": "Submit another feedback",
+    "sendFeedback": "Send feedback",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "requiredField": "This is a required field"
+  }
+}

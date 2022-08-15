@@ -1,7 +1,10 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import styles from "../styles/Home.module.scss";
+import Landing from "../components/Landing/Landing";
+import Projects from "../components/Projects/Projects";
+import ContactMe from "../components/ContactMe/ContactMe";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Home: NextPage = () => {
   return (
@@ -11,19 +14,20 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.wrapper__main}>
-        <p>🛠️</p>
-        <p>Work in progress</p>
+        <Landing />
+        <Projects />
+        <ContactMe />
       </main>
-
-      <footer className={styles.wrapper__footer}>
-        <Link href="https://github.com/nikolaevaxenov/">
-          <a target="_blank">
-            © 2022 <u>Nikolaev-Axenov</u>
-          </a>
-        </Link>
-      </footer>
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(ctx.locale as string, ["common"])),
+    },
+  };
 };
 
 export default Home;
